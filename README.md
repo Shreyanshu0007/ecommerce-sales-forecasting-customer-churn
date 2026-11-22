@@ -37,13 +37,13 @@ Project_1_Ecommerce/
 ├── data/
 │   ├── raw/
 │   └── cleaned_delivered_sales.csv
+│
 ├── notebooks/
 │   └── 01_dataset_exploration.ipynb
-├── src/
-├── sql/
-├── dashboards/
+│
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── .gitignore
 ```
 
 ## Project Workflow
