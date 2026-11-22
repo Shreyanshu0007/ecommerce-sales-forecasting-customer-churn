@@ -68,12 +68,9 @@ The cleaned dataset is generated during the data preparation process.
 ```text
 Project_1_Ecommerce/
 ├── data/
-│   ├── raw/
-│   └── cleaned_delivered_sales.csv
-│
+│   └── raw/
 ├── notebooks/
 │   └── 01_dataset_exploration.ipynb
-│
 ├── README.md
 ├── requirements.txt
 └── .gitignore
