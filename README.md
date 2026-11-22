@@ -21,6 +21,39 @@ The dataset contains information about customers, orders, products, sellers, pay
 
 Currency: Brazilian Real (BRL).
 
+## Dataset Setup
+
+The dataset is not included in this GitHub repository because the raw and processed CSV files are excluded through `.gitignore`.
+
+To run this project locally:
+
+1. Download the [Brazilian E-Commerce Public Dataset by Olist from Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
+2. Extract the downloaded files.
+3. Create the following folder structure in the project root:
+
+```text
+data/
+├── raw/
+```
+
+4. Place all nine original CSV files inside `data/raw/`.
+
+The expected files are:
+
+- olist_customers_dataset.csv
+- olist_geolocation_dataset.csv
+- olist_order_items_dataset.csv
+- olist_order_payments_dataset.csv
+- olist_order_reviews_dataset.csv
+- olist_orders_dataset.csv
+- olist_products_dataset.csv
+- olist_sellers_dataset.csv
+- product_category_name_translation.csv
+
+5. Run the notebook from the `notebooks/` directory or use the paths specified in the notebook.
+
+The cleaned dataset is generated during the data preparation process.
+
 ## Technologies Used
 
 - Python
@@ -94,8 +127,11 @@ Logistic Regression achieved the highest balanced accuracy among the three evalu
 Clone the repository:
 
 ```bash
-git clone https://github.com/Shreyanshu0007/ecommerce-sales-forecasting-customer-churn
-cd Project_1_Ecommerce
+
+git clone https://github.com/Shreyanshu0007/ecommerce-sales-forecasting-customer-churn.git
+
+cd ecommerce-sales-forecasting-customer-churn
+
 ```
 
 Install dependencies:
