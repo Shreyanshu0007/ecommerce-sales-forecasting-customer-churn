@@ -1,0 +1,24 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# IDE settings
+.vscode/
+
+# Dataset files - do not upload until redistribution terms are verified
+data/raw/
+data/cleaned_delivered_sales.csv
+
+# Operating system files
+.DS_Store
+Thumbs.db
