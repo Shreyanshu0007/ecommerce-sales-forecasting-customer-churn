@@ -1,14 +1,14 @@
-# Brazilian E-commerce Data Analysis and Customer Inactivity Classification
+# Brazilian E-commerce Sales, Customer Behaviour and Churn Analysis
 
 ## Project Overview
 
-An end-to-end exploratory data analysis and introductory machine-learning project using the Brazilian E-Commerce Public Dataset by Olist.
+An end-to-end beginner-level data analysis and introductory machine-learning project using the Brazilian E-Commerce Public Dataset by Olist. The work is intentionally limited to the Python, data analysis, exploratory data analysis, feature preparation, basic classification, and model-evaluation topics covered in the learning roadmap.
 
 The project examines historical sales and revenue trends, product-category performance, and customer purchasing behaviour. It also constructs a customer-level dataset and compares a Dummy Classifier baseline with Logistic Regression to classify inactivity over a defined 180-day observation window.
 
-**Scope clarification:** This project performs historical monthly revenue analysis; it does not currently build or evaluate a predictive sales-forecasting model. Customer inactivity is an analytical proxy based on the observation window, not confirmation that a customer has permanently churned.
+**Scope clarification:** The sales component is historical monthly revenue analysis and a 3-month moving average; it does not build or evaluate a predictive sales-forecasting model. Customer inactivity is an analytical proxy based on the observation window, not confirmation that a customer has permanently churned.
 
-The notebook demonstrates a foundational workflow using Python, Pandas, NumPy, Matplotlib, Seaborn, and Scikit-learn.
+The notebook uses Python, Pandas, NumPy, Matplotlib, Seaborn, and Scikit-learn. It focuses on foundational methods rather than adding advanced techniques that have not yet been covered in the learning roadmap.
 
 ## Project Objectives
 
@@ -74,13 +74,13 @@ project/
 - **Python**
 - **Pandas and NumPy** — data loading, cleaning, grouping, and feature preparation
 - **Matplotlib and Seaborn** — exploratory data visualization
-- **Scikit-learn** — train-test split, Dummy Classifier, Logistic Regression, feature scaling, and classification metrics
+- **Scikit-learn** — stratified train-test split, Dummy Classifier, Logistic Regression, StandardScaler, and classification metrics
 - **Jupyter Notebook**
 - **Git and GitHub**
 
 ## Notebook Workflow
 
-The notebook is organized into these sections:
+The notebook follows this 14-section workflow:
 
 1. Project overview
 2. Business problem
@@ -88,7 +88,7 @@ The notebook is organized into these sections:
 4. Importing libraries
 5. Data loading and initial exploration
 6. Data cleaning and preparation
-7. Exploratory data analysis
+7. Exploratory data analysis (EDA)
 8. Product and category performance
 9. Customer behaviour and retention analysis
 10. Historical monthly revenue analysis
@@ -117,10 +117,10 @@ The executed notebook contains **62,299 customers**:
 
 The test set contains 12,460 customers. The class distribution is highly imbalanced, so accuracy alone is misleading.
 
-| Model | Accuracy | Inactive (1) Recall | Active (0) Recall |
-|---|---:|---:|---:|
-| Dummy Classifier | 0.9902 | 1.0000 | 0.0000 |
-| Logistic Regression | 0.5774 | 0.5781 | 0.5082 |
+| Model | Accuracy | Inactive (1) Recall | Active (0) Precision | Active (0) Recall | Active (0) F1-score |
+|---|---:|---:|---:|---:|---:|
+| Dummy Classifier | 0.9902 | 1.0000 | 0.0000 | 0.0000 | 0.0000 |
+| Logistic Regression | 0.5774 | 0.5781 | 0.0118 | 0.5082 | 0.0230 |
 
 Logistic Regression identifies some customers in both classes, while the Dummy Classifier predicts every customer as inactive. However, Logistic Regression's active-class precision is only **0.0118** and active-class F1-score is **0.0230**.
 
@@ -170,6 +170,20 @@ jupyter notebook
 ```
 
 Open `notebooks/01_dataset_exploration.ipynb` and run the cells in order. Make sure the nine CSV files are in `data/raw/` before running the notebook.
+
+## Learning Scope
+
+This project is designed to demonstrate the concepts covered so far in the learning roadmap:
+
+- Python and core data structures used in the notebook.
+- Pandas and NumPy for loading, cleaning, filtering, grouping, merging, and feature preparation.
+- Matplotlib and Seaborn for exploratory visualizations.
+- Basic machine-learning workflow: feature selection, target selection, train-test splitting, and stratified sampling.
+- Dummy Classifier and Logistic Regression.
+- StandardScaler and Pipeline.
+- Confusion matrix, precision, recall, F1-score, and model comparison.
+
+The project intentionally does not add advanced forecasting methods, XGBoost, SMOTE, SHAP, or other techniques that are outside the topics covered at this stage. These can be explored in a later project after studying them.
 
 ## Limitations
 
