@@ -1,23 +1,25 @@
-# Brazilian E-commerce Analysis and Customer Churn Prediction
+# Brazilian E-commerce Data Analysis and Customer Inactivity Classification
 
 ## Project Overview
 
-An exploratory data analysis and introductory machine-learning project using the Brazilian E-Commerce Public Dataset by Olist.
+An end-to-end exploratory data analysis and introductory machine-learning project using the Brazilian E-Commerce Public Dataset by Olist.
 
-The project explores sales performance, product categories, and customer purchasing behaviour, then builds a Logistic Regression model to classify customer inactivity over a defined 180-day observation window.
+The project examines historical sales and revenue trends, product-category performance, and customer purchasing behaviour. It also constructs a customer-level dataset and compares a Dummy Classifier baseline with Logistic Regression to classify inactivity over a defined 180-day observation window.
+
+**Scope clarification:** This project performs historical monthly revenue analysis; it does not currently build or evaluate a predictive sales-forecasting model. Customer inactivity is an analytical proxy based on the observation window, not confirmation that a customer has permanently churned.
 
 The notebook demonstrates a foundational workflow using Python, Pandas, NumPy, Matplotlib, Seaborn, and Scikit-learn.
 
 ## Project Objectives
 
 - Explore and prepare the Olist e-commerce datasets.
-- Analyze historical revenue trends and product-category performance.
-- Understand customer purchasing and repeat-order behaviour.
-- Define customer inactivity using a 180-day prediction window.
-- Prepare customer-level features and a target variable.
-- Compare a simple Dummy Classifier baseline with Logistic Regression.
-- Evaluate the models using a confusion matrix, precision, recall, and F1-score.
-- Summarize findings and practical business recommendations.
+- Analyze historical monthly revenue trends and product-category performance.
+- Understand customer purchasing frequency and repeat-order behaviour.
+- Define an inactivity label using a 180-day prediction window.
+- Engineer customer-level features and prepare a classification dataset.
+- Compare a Dummy Classifier baseline with Logistic Regression.
+- Evaluate classification performance with class-aware metrics and interpret the impact of severe imbalance.
+- Summarize findings, limitations, and practical business recommendations.
 
 ## Dataset
 
@@ -78,18 +80,22 @@ project/
 
 ## Notebook Workflow
 
-1. Dataset loading and initial exploration
-2. Data cleaning and preparation
-3. Exploratory Data Analysis
-4. Product and category performance
-5. Customer behaviour and repeat-purchase analysis
-6. Historical monthly revenue trend analysis
-7. Customer inactivity definition and churn dataset preparation
-8. Feature and target selection
-9. Stratified 80/20 train-test split
-10. Dummy Classifier baseline
-11. Logistic Regression classification
-12. Model evaluation and business interpretation
+The notebook is organized into these sections:
+
+1. Project overview
+2. Business problem
+3. Dataset description
+4. Importing libraries
+5. Data loading and initial exploration
+6. Data cleaning and preparation
+7. Exploratory data analysis
+8. Product and category performance
+9. Customer behaviour and retention analysis
+10. Historical monthly revenue analysis
+11. Customer churn analysis and dataset preparation
+12. Machine learning: customer churn classification
+13. Model evaluation and interpretation
+14. Business insights and conclusion
 
 ## Customer Inactivity Definition
 
